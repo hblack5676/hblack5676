@@ -1,3 +1,25 @@
+<#
+.SYNOPSIS
+    This PowerShell script is enabling the Windows audit policy system to create security event logs
+    Author          : Hugh Black
+    LinkedIn        : linkedin.com/in/hugh-black/
+    GitHub          : github.com/hblack5676
+    Date Created    : 2026-06-21
+    Last Modified   : 2026-06-21
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-AU-000582
+    Documentation   : 
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
 # Enable Audit File System - Success
 
 auditpol /set /subcategory:"File System" /success:enable
