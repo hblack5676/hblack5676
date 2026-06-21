@@ -1,0 +1,12 @@
+$Path = "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa"
+$Name = "SCENoApplyLegacyAuditPolicy"
+
+# Create the registry value and set it to Enabled
+New-ItemProperty -Path $Path `
+                 -Name $Name `
+                 -Value 1 `
+                 -PropertyType DWord `
+                 -Force | Out-Null
+
+# Verify the setting
+Get-ItemProperty -Path $Path -Name $Name
