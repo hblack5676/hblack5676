@@ -1,0 +1,3 @@
+# Enable Audit File System - Success
+
+auditpol /set /subcategory:"File System" /success:enable
