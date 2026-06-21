@@ -1,3 +1,25 @@
+<#
+.SYNOPSIS
+    This PowerShell script requires Windows to use Advanced Audit Policy subcategories instead of the older broad audit categories.
+    Author          : Hugh Black
+    LinkedIn        : linkedin.com/in/hugh-black/
+    GitHub          : github.com/hblack5676
+    Date Created    : 2026-06-21
+    Last Modified   : 2026-06-21
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-SO-000030
+    Documentation   : 
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
 $Path = "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa"
 $Name = "SCENoApplyLegacyAuditPolicy"
 
