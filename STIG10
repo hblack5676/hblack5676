@@ -1,1 +1,23 @@
+<#
+.SYNOPSIS
+    This PowerShell script updates the audit policy so that when a user fails to log in with admin access, a log is sent.
+    Author          : Hugh Black
+    LinkedIn        : linkedin.com/in/hugh-black/
+    GitHub          : github.com/hblack5676
+    Date Created    : 2026-06-23
+    Last Modified   : 2026-06-23
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-AU-000588
+    Documentation   : 
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
 auditpol /set /subcategory:"Sensitive Privilege Use" /failure:enable
