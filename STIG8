@@ -1,0 +1,20 @@
+$Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription"
+
+if (!(Test-Path $Path)) {
+    New-Item -Path $Path -Force | Out-Null
+}
+
+# Enable PowerShell Transcription
+New-ItemProperty -Path $Path -Name "EnableTranscripting" -Value 1 -PropertyType DWord -Force | Out-Null
+
+# Optional but recommended by DISA:
+# Set a transcript output directory
+New-ItemProperty -Path $Path -Name "OutputDirectory" `
+    -Value "C:\PowerShellTranscripts" `
+    -PropertyType String -Force | Out-Null
+
+# Create the directory if needed
+New-Item -ItemType Directory -Path "C:\PowerShellTranscripts" -Force | Out-Null
+
+# Verify
+Get-ItemProperty -Path $Path
