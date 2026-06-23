@@ -1,0 +1,15 @@
+$Path = "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0"
+$Name = "allownullsessionfallback"
+
+if (!(Test-Path $Path)) {
+    New-Item -Path $Path -Force | Out-Null
+}
+
+New-ItemProperty -Path $Path `
+    -Name $Name `
+    -Value 0 `
+    -PropertyType DWord `
+    -Force | Out-Null
+
+# Verify
+Get-ItemProperty -Path $Path -Name $Name
